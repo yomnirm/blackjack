@@ -81,25 +81,29 @@ public class BlackJack {
 			sam.drawCard(deck.dealCard());
 		}
 
-		if (sam.hasBlackJack()) 
+		if (sam.hasBlackJack()) {
 			return true;  // sam wins
-
-		if (sam.getTotalScore() > 21)
+		}
+			
+		if (sam.getTotalScore() > 21) {
 			return false; // sam looses
-
+		}
+			
 		// dealer starts drawing
 		while (!(dealer.getTotalScore() > sam.getTotalScore())) { 
 			
 			dealer.drawCard(deck.dealCard());
 		}
 
-		if (dealer.hasBlackJack()) 
+		if (dealer.hasBlackJack()) {
 			return false; // dealer wins
-
-		if (dealer.getTotalScore() > 21) 
+		}
+			
+		if (dealer.getTotalScore() > 21) {
 			return true; // dealer looses
+		}
+			
 
-		
 		return sam.getTotalScore() > dealer.getTotalScore();
 
 	}
