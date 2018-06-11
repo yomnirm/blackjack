@@ -167,6 +167,20 @@ public class GameTest {
 	}
 	
 	@Test
+	public void testWhenDealerHasHigherScoreOnFirstDraw() {
+		
+		deckCards.add(new Card(Suit.CLUBS, Value.TEN));
+		deckCards.add(new Card(Suit.HEARTS, Value.KING));
+		deckCards.add(new Card(Suit.DIAMONDS, Value.EIGHT));
+		deckCards.add(new Card(Suit.DIAMONDS, Value.QUEEN));
+		
+		Deck deck = new Deck(deckCards);
+		
+		assertFalse("dealer wins", blackJack.playGame(deck, sam, dealer));
+		
+	}
+	
+	@Test
 	public void testGame() {
 		
 		deckCards.add(new Card(Suit.CLUBS, Value.ACE));
