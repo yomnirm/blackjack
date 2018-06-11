@@ -20,6 +20,7 @@ public class BlackJack {
 	public boolean playGame(Deck deck, Player sam, Player dealer) {
 
 		boolean flag = false;
+		
 		drawInitialCards(deck, sam, dealer);
         
 		// CASE#1 : only sam has BlackJack
@@ -44,7 +45,6 @@ public class BlackJack {
 
 		// CASE#5
 		else {
-
 			flag = continueGame(deck, sam, dealer);
 		}
 
@@ -146,8 +146,7 @@ public class BlackJack {
 		dealer.drawCard(deck.dealCard());
 		sam.drawCard(deck.dealCard());
 		dealer.drawCard(deck.dealCard());
-
-	}
+     }
 
 	/**
 	 * Prints the output of the game.
