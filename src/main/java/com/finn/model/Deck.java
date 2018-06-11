@@ -54,12 +54,5 @@ public class Deck {
 
 		return !deckCards.isEmpty() ? deckCards.remove(0) : null;
 	}
-	
-	// REMOVE
-	public void displayCards() {
-		
-		System.out.println("Deck: " + deckCards.size() + "-"+ deckCards);
-	}
 
-	
 }
