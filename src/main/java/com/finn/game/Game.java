@@ -24,8 +24,6 @@ public class Game {
 			deck.shuffle();
 		}
 
-		deck.displayCards();
-
 		Player sam = new Player();
 		Player dealer = new Player();
 		BlackJack blackJack = new BlackJack();
