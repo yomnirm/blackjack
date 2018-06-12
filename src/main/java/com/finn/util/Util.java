@@ -43,7 +43,7 @@ public class Util {
      */
 	public static boolean isFileProvided(String[] args) {
 
-		return null != args && args.length != 0 && !"".equals(args[0]);
+		return (null != args && args.length != 0 && null !=args[0] && !"".equals(args[0]));
 
 	}
 	
