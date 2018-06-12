@@ -18,7 +18,6 @@ public class Game {
 
 		if (fileExists) {
 			deck = new Deck(Util.buildCardListFromFileContent(args[0]));
-			deck.shuffle();
 		} 
 		else {
 			deck = new Deck();
