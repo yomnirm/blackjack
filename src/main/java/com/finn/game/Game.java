@@ -14,9 +14,11 @@ public class Game {
 	public static void main(String[] args) throws IOException {
 
 		Deck deck;
+		boolean fileExists = Util.isFileProvided(args);
 
-		if (Util.isFileProvided(args)) {
+		if (fileExists) {
 			deck = new Deck(Util.buildCardListFromFileContent(args[0]));
+			deck.shuffle();
 		} 
 		else {
 			deck = new Deck();
