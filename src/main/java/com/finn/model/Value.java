@@ -105,7 +105,7 @@ public enum Value {
 			break;
 
 		default:
-			throw new IllegalArgumentException("Invalid Suit argument");
+			throw new IllegalArgumentException("Invalid Value argument: " + str);
 
 		}
 
