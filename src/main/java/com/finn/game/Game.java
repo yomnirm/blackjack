@@ -1,7 +1,9 @@
 package com.finn.game;
 
 import java.io.IOException;
+import java.util.List;
 
+import com.finn.model.Card;
 import com.finn.model.Deck;
 import com.finn.model.Player;
 import com.finn.util.Util;
@@ -17,9 +19,12 @@ public class Game {
 		boolean fileExists = Util.isFileProvided(args);
 
 		if (fileExists) {
-			deck = new Deck(Util.buildCardListFromFileContent(args[0]));
+			
+			List<Card> cards = Util.buildCardListFromFileContent(args[0]);
+			deck = new Deck(cards);
 		} 
 		else {
+			
 			deck = new Deck();
 			deck.populateDeckOfCards();
 			deck.shuffle();
